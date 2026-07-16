@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>Where we stay after Radical Design -- Jul 17</title>
+</head>
+<body>
+<style>
+  :root {
+    --bg: #F3F5F4;
+    --card: #FFFFFF;
+    --ink: #16201F;
+    --muted: #55635F;
+    --line: #DCE2DF;
+    --line-strong: #C3CCC8;
+    --accent: #0E5B5B;
+    --accent-2: #0A4646;
+    --accent-soft: #E3EEEC;
+    --good: #1F7A4D;
+    --good-soft: #E1F0E7;
+    --warn: #9A6410;
+    --warn-soft: #F6ECD7;
+    --bad: #B23A2E;
+    --bad-soft: #F6E1DD;
+    --shadow: 0 1px 2px rgba(16,32,31,.05), 0 8px 24px rgba(16,32,31,.06);
+    --radius: 14px;
+    --maxw: 940px;
+    --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1413;
+      --card: #171F1D;
+      --ink: #EAF0EE;
+      --muted: #9EABA7;
+      --line: #27312F;
+      --line-strong: #35413E;
+      --accent: #58C3BE;
+      --accent-2: #7ED6D1;
+      --accent-soft: #12312F;
+      --good: #4CBB80;
+      --good-soft: #12291F;
+      --warn: #E0A63A;
+      --warn-soft: #2C2411;
+      --bad: #E9705F;
+      --bad-soft: #2E1815;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #F3F5F4; --card: #FFFFFF; --ink: #16201F; --muted: #55635F;
+    --line: #DCE2DF; --line-strong: #C3CCC8; --accent: #0E5B5B; --accent-2: #0A4646;
+    --accent-soft: #E3EEEC; --good: #1F7A4D; --good-soft: #E1F0E7; --warn: #9A6410;
+    --warn-soft: #F6ECD7; --bad: #B23A2E; --bad-soft: #F6E1DD;
+    --shadow: 0 1px 2px rgba(16,32,31,.05), 0 8px 24px rgba(16,32,31,.06);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1413; --card: #171F1D; --ink: #EAF0EE; --muted: #9EABA7;
+    --line: #27312F; --line-strong: #35413E; --accent: #58C3BE; --accent-2: #7ED6D1;
+    --accent-soft: #12312F; --good: #4CBB80; --good-soft: #12291F; --warn: #E0A63A;
+    --warn-soft: #2C2411; --bad: #E9705F; --bad-soft: #2E1815;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .page {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 20px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    padding: clamp(20px, 4vw, 56px) 20px 72px;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; }
+
+  .eyebrow {
+    font-size: .82rem; font-weight: 700; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent);
+    margin: 0 0 12px;
+  }
+  h1 {
+    font-size: clamp(2rem, 5.2vw, 3.1rem);
+    line-height: 1.08; font-weight: 800; letter-spacing: -.02em;
+    text-wrap: balance; margin: 0 0 14px;
+  }
+  .sub { font-size: clamp(1.1rem, 2.2vw, 1.3rem); color: var(--muted); margin: 0 0 26px; max-width: 44ch; }
+
+  .banner {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 18px 20px; margin: 0 0 40px;
+  }
+  .banner .dot { flex: 0 0 auto; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); margin-top: 9px; }
+  .banner p { margin: 0; font-size: 1.02rem; }
+  .banner strong { font-weight: 800; }
+
+  section { margin: 0 0 44px; }
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; letter-spacing: -.01em;
+    margin: 0 0 6px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  h2 .num { font-size: .95rem; font-weight: 700; color: var(--accent); letter-spacing: .1em; }
+  .lead { color: var(--muted); margin: 0 0 20px; font-size: 1.05rem; max-width: 60ch; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: .82rem; font-weight: 700; letter-spacing: .03em;
+    padding: 5px 11px; border-radius: 999px; white-space: nowrap;
+  }
+  .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; opacity: .9; }
+  .chip.good { background: var(--good-soft); color: var(--good); }
+  .chip.warn { background: var(--warn-soft); color: var(--warn); }
+  .chip.bad  { background: var(--bad-soft);  color: var(--bad); }
+  .chip.flat { background: transparent; border: 1px solid var(--line-strong); color: var(--muted); }
+  .chip.flat::before { display: none; }
+
+  .screen-grid { display: grid; gap: 14px; }
+  .screen-row {
+    display: grid; grid-template-columns: 148px 1fr; gap: 16px; align-items: start;
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 16px 18px; box-shadow: var(--shadow);
+  }
+  .screen-row .city { font-weight: 800; font-size: 1.06rem; }
+  .screen-row .why { color: var(--muted); font-size: .98rem; margin: 6px 0 0; }
+  .clear-line { margin-top: 16px; font-size: 1rem; color: var(--muted); }
+  .clear-line b { color: var(--ink); font-weight: 700; }
+
+  .pick {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-top: 6px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(22px, 3.5vw, 34px);
+  }
+  .pick-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; flex-wrap: wrap; margin-bottom: 8px; }
+  .pick-name { font-size: clamp(1.5rem, 3.4vw, 2.05rem); font-weight: 800; letter-spacing: -.015em; margin: 4px 0 2px; line-height: 1.1; }
+  .pick-city { color: var(--muted); font-weight: 600; font-size: 1.05rem; }
+  .price-badge {
+    text-align: right; background: var(--accent); color: #fff;
+    border-radius: 12px; padding: 12px 16px; min-width: 150px;
+  }
+  :root[data-theme="dark"] .price-badge, .price-badge { color: #fff; }
+  @media (prefers-color-scheme: dark) { .price-badge { color: #06110F; } }
+  :root[data-theme="dark"] .price-badge { color: #06110F; }
+  :root[data-theme="light"] .price-badge { color: #FFFFFF; }
+  .price-badge .amt { font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+  .price-badge .unit { font-size: .82rem; font-weight: 600; opacity: .92; display: block; margin-top: 4px; }
+  .verified { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--good); margin-top: 10px; }
+  .verified::before { content: "\2713"; font-weight: 900; }
+
+  .spec { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px 28px; margin: 22px 0 0; border-top: 1px solid var(--line); }
+  .spec .row { display: grid; grid-template-columns: 128px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .spec .k { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .spec .v { font-size: 1.02rem; }
+  .spec .v b { font-weight: 800; }
+
+  .pick-foot { margin-top: 22px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 22px; display: flex; flex-direction: column;
+  }
+  .card h3 { font-size: 1.28rem; font-weight: 800; margin: 0 0 2px; letter-spacing: -.01em; }
+  .card .csub { color: var(--muted); font-size: .95rem; font-weight: 600; margin-bottom: 14px; }
+  .card .cprice { font-size: 1.32rem; font-weight: 800; font-variant-numeric: tabular-nums; margin: 2px 0 2px; }
+  .card .cprice span { font-size: .9rem; font-weight: 600; color: var(--muted); }
+  .card ul { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 9px; }
+  .card li { display: grid; grid-template-columns: 18px 1fr; gap: 9px; font-size: .98rem; align-items: start; }
+  .card li .m { color: var(--accent); font-weight: 800; line-height: 1.5; }
+  .card li.no .m { color: var(--bad); }
+  .card .tagrow { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: var(--card); }
+  table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 1rem; }
+  thead th { text-align: left; font-size: .76rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 800; padding: 15px 14px; border-bottom: 2px solid var(--line-strong); white-space: nowrap; }
+  tbody td { padding: 14px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr.top td { background: var(--accent-soft); }
+  td .pl { font-weight: 800; }
+  td .pl small { display: block; font-weight: 600; color: var(--muted); font-size: .84rem; }
+  td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+  .panel h3 { margin: 0 0 14px; font-size: 1.1rem; font-weight: 800; display: flex; align-items: center; gap: 9px; }
+  .panel h3 .tick { color: var(--good); }
+  .panel h3 .q { color: var(--warn); }
+  .panel ul { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 11px; }
+  .panel li { display: grid; grid-template-columns: 20px 1fr; gap: 8px; font-size: .98rem; }
+  .panel li .m { font-weight: 800; }
+  .panel.ok li .m { color: var(--good); }
+  .panel.check li .m { color: var(--warn); }
+
+  .steps { counter-reset: s; display: grid; gap: 14px; }
+  .step { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
+  .step .n { counter-increment: s; }
+  .step .n::before { content: counter(s); display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 800; font-size: 1.1rem; }
+  @media (prefers-color-scheme: dark) { .step .n::before { color: #06110F; } }
+  :root[data-theme="dark"] .step .n::before { color: #06110F; }
+  :root[data-theme="light"] .step .n::before { color: #fff; }
+  .step p { margin: 0; font-size: 1.02rem; }
+  .step p b { font-weight: 800; }
+
+  a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+  a:focus-visible, .step:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  footer { margin-top: 46px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+  footer p { margin: 0 0 6px; }
+
+  .card, .step { transition: transform .15s ease, box-shadow .15s ease; }
+  .card:hover, .step:hover { transform: translateY(-2px); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } .card:hover, .step:hover { transform: none; } }
+
+  @media (max-width: 620px) {
+    .page { font-size: 19px; }
+    .spec { grid-template-columns: 1fr; }
+    .split { grid-template-columns: 1fr; }
+    .screen-row { grid-template-columns: 1fr; gap: 8px; }
+    .price-badge { text-align: left; }
+    .pick-top { flex-direction: column; }
+  }
+</style>
+
+<div class="page">
+  <div class="wrap">
+
+    <header>
+      <p class="eyebrow">Netherlands &middot; slow travel &middot; after the trailer pickup</p>
+      <h1>Where we stay after Radical Design</h1>
+      <p class="sub">Check-in Friday 17 July. Four to seven nights, one cool city, a real kitchen, well reviewed, under $150 a night.</p>
+      <div class="banner">
+        <span class="dot"></span>
+        <p><strong>Nothing is booked yet.</strong> I emailed the Haarlem host (Els) on 16 July to check the dates, the bike-shed space, and the cancellation terms. Once she replies we can book. Everything below is here so we can pick together.</p>
+      </div>
+    </header>
+
+    <section>
+      <h2><span class="num">01</span> What's off the table for these dates</h2>
+      <p class="lead">Two cities have a timing problem in our exact window. The rest are clear.</p>
+      <div class="screen-grid">
+        <div class="screen-row">
+          <div><span class="chip bad">Excluded</span></div>
+          <div>
+            <div class="city">Nijmegen</div>
+            <p class="why">The Vierdaagse marches (21-24 July) and the Vierdaagsefeesten festival (18-24 July) land right on our stay -- roughly a million visitors. Rooms are sold out or priced at multiples. Great city, wrong week.</p>
+          </div>
+        </div>
+        <div class="screen-row">
+          <div><span class="chip warn">Caution</span></div>
+          <div>
+            <div class="city">Amsterdam as a base</div>
+            <p class="why">The Weeknd and Playboi Carti play the Arena on our check-in weekend (17-18 July), which spikes rates, and the city tax is about 12.5%. Fine to day-trip in for the med-locker pickup, weaker as a home for a week.</p>
+          </div>
+        </div>
+      </div>
+      <p class="clear-line"><b>Clear for the window:</b> Haarlem, Utrecht, Delft, Leiden, Rotterdam, Den Bosch.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span> The top pick</h2>
+      <div class="pick">
+        <div class="pick-top">
+          <div>
+            <span class="chip good">Emailed Els &middot; awaiting reply</span>
+            <div class="pick-name">Bed &amp; Bike Haarlem Nr1</div>
+            <div class="pick-city">Haarlem &middot; whole ground-floor apartment</div>
+          </div>
+          <div class="price-badge">
+            <span class="amt">$149</span>
+            <span class="unit">per night, all-in</span>
+          </div>
+        </div>
+        <div class="verified">Price verified on the host's own page</div>
+
+        <div class="spec">
+          <div class="row"><div class="k">Per night</div><div class="v"><b>&euro;135 all-in</b> (~$149). Includes VAT, tourist tax, e-bikes, linen, cleaning -- no add-ons.</div></div>
+          <div class="row"><div class="k">5 nights</div><div class="v"><b>&euro;675</b> (~$742)</div></div>
+          <div class="row"><div class="k">Reviews</div><div class="v"><b>9.6 / 10</b> over 289 reviews. Cleanliness called out directly.</div></div>
+          <div class="row"><div class="k">Kitchen</div><div class="v">Full private kitchen -- the best cooking setup of the four.</div></div>
+          <div class="row"><div class="k">Bed</div><div class="v"><b>One large double</b> (confirmed, not twins).</div></div>
+          <div class="row"><div class="k">Bikes + trailer</div><div class="v">Lockable bike shed on site. Fits the two Bromptons; whether the folded trailer fits is the question I asked Els.</div></div>
+          <div class="row"><div class="k">To Amsterdam</div><div class="v"><b>15-20 min</b> by train -- the easiest of the four for the locker run.</div></div>
+          <div class="row"><div class="k">Booking</div><div class="v">Host-direct via bedandbreakfast.nl -- not on hotels.com, so a separate payment step.</div></div>
+        </div>
+
+        <div class="pick-foot">
+          <span class="chip good">Under budget</span>
+          <span class="chip flat">Host: Els &middot; info@bedandbikehaarlemnr1.nl</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span> If we'd rather book instantly</h2>
+      <p class="lead">These three confirm on the spot (Haarlem needs the host to reply first). Prices are indicative -- only Haarlem's is a verified live figure.</p>
+      <div class="cards">
+
+        <div class="card">
+          <h3>Premier Suites Plus</h3>
+          <div class="csub">Rotterdam &middot; serviced 1-bedroom</div>
+          <div class="cprice">$160&ndash;176 <span>/ night</span></div>
+          <span class="chip warn" style="align-self:flex-start;margin-top:6px;">Over budget</span>
+          <ul>
+            <li><span class="m">+</span><span>8.9 / 10 over ~1,656 reviews. Spotless, spacious.</span></li>
+            <li><span class="m">+</span><span>Kitchenette. Directly opposite Rotterdam Centraal, ~40 min to Amsterdam.</span></li>
+            <li><span class="m">+</span><span>Brand free-cancel to ~16:00 the day before.</span></li>
+            <li class="no"><span class="m">!</span><span>Pick the king room -- some units are two singles.</span></li>
+          </ul>
+          <div class="tagrow"><span class="chip flat">On hotels.com</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Hotel2Stay</h3>
+          <div class="csub">Amsterdam-Sloterdijk &middot; studio</div>
+          <div class="cprice">$132&ndash;165 <span>/ night</span></div>
+          <span class="chip warn" style="align-self:flex-start;margin-top:6px;">+ 12.5% city tax</span>
+          <ul>
+            <li><span class="m">+</span><span>8.6 / 10 over ~3,900 reviews. Full kitchen in every studio.</span></li>
+            <li><span class="m">+</span><span>Best bike storage -- locked shed inside the garage. ~5 min to Centraal.</span></li>
+            <li><span class="m">+</span><span>Sloterdijk office district, away from the Arena crowds.</span></li>
+            <li class="no"><span class="m">!</span><span>Book the Deluxe Studio (double); the base studio is two singles.</span></li>
+          </ul>
+          <div class="tagrow"><span class="chip flat">On hotels.com</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Apartment Havenstraat</h3>
+          <div class="csub">Delft &middot; ground-floor 1-bedroom</div>
+          <div class="cprice">$99&ndash;132 <span>/ night</span></div>
+          <span class="chip good" style="align-self:flex-start;margin-top:6px;">Cheapest</span>
+          <ul>
+            <li><span class="m">+</span><span>9.5 / 10 over 143 reviews. Full kitchen, big windows, good light.</span></li>
+            <li><span class="m">+</span><span>Quiet university town, ~5 min walk to the station.</span></li>
+            <li class="no"><span class="m">!</span><span>Bed not confirmed as a double, and bike storage is unlisted -- both need a host check.</span></li>
+            <li class="no"><span class="m">!</span><span>~55-60 min to Amsterdam (longest of the four).</span></li>
+          </ul>
+          <div class="tagrow"><span class="chip flat">Booking.com</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">04</span> Side by side</h2>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Place</th>
+              <th>Reviews</th>
+              <th>$ / night</th>
+              <th>Kitchen</th>
+              <th>Bed</th>
+              <th>Bikes + trailer</th>
+              <th>&rarr; Amsterdam</th>
+              <th>Book via</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="top">
+              <td><span class="pl">Bed &amp; Bike Nr1<small>Haarlem</small></span></td>
+              <td class="num">9.6</td>
+              <td class="num">$149 all-in</td>
+              <td>Full</td>
+              <td>Double &check;</td>
+              <td>Shed (trailer TBD)</td>
+              <td class="num">15-20 min</td>
+              <td>Host direct</td>
+            </tr>
+            <tr>
+              <td><span class="pl">Premier Suites<small>Rotterdam</small></span></td>
+              <td class="num">8.9</td>
+              <td class="num">$160-176</td>
+              <td>Kitchenette</td>
+              <td>King*</td>
+              <td>In unit / garage</td>
+              <td class="num">~40 min</td>
+              <td>hotels.com</td>
+            </tr>
+            <tr>
+              <td><span class="pl">Hotel2Stay<small>Amsterdam</small></span></td>
+              <td class="num">8.6</td>
+              <td class="num">$132-165 +tax</td>
+              <td>Full</td>
+              <td>Double*</td>
+              <td>Locked shed (best)</td>
+              <td class="num">~5 min</td>
+              <td>hotels.com</td>
+            </tr>
+            <tr>
+              <td><span class="pl">Apt Havenstraat<small>Delft</small></span></td>
+              <td class="num">9.5</td>
+              <td class="num">$99-132</td>
+              <td>Full</td>
+              <td>Unconfirmed</td>
+              <td>Unlisted</td>
+              <td class="num">~55 min</td>
+              <td>Booking.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="clear-line">* Pick the specific double/king room type at booking. Only Haarlem's price is a verified live figure; the others are indicative ranges for peak July.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span> What's solid, what still needs a check</h2>
+      <div class="split">
+        <div class="panel ok">
+          <h3><span class="tick">&#10003;</span> Confirmed</h3>
+          <ul>
+            <li><span class="m">&#10003;</span><span>Haarlem's &euro;135 all-in price, on the host's own page.</span></li>
+            <li><span class="m">&#10003;</span><span>Haarlem has a real double bed and a full kitchen.</span></li>
+            <li><span class="m">&#10003;</span><span>Hotel2Stay's locked garage bike shed.</span></li>
+            <li><span class="m">&#10003;</span><span>Nijmegen is a hard no for these dates.</span></li>
+          </ul>
+        </div>
+        <div class="panel check">
+          <h3><span class="q">?</span> Needs a check before booking</h3>
+          <ul>
+            <li><span class="m">?</span><span>Is Haarlem open 17-22 July, and does the shed fit the folded trailer? (Asked Els.)</span></li>
+            <li><span class="m">?</span><span>Live prices for the other three -- confirmed on hotels.com when we book.</span></li>
+            <li><span class="m">?</span><span>Delft: bed type and bike storage.</span></li>
+            <li><span class="m">?</span><span>Cancellation terms on all four.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span> Next</h2>
+      <div class="steps">
+        <div class="step"><div class="n"></div><p><b>Wait for Els.</b> Her reply settles availability, the trailer in the shed, and cancellation. Then Haarlem is bookable.</p></div>
+        <div class="step"><div class="n"></div><p><b>Want a backup held?</b> Say so and I'll pull live 17-22 July quotes for Rotterdam or Hotel2Stay and stage them to the card screen -- you pay on the Amex Gold.</p></div>
+        <div class="step"><div class="n"></div><p><b>Decide the city together.</b> Haarlem is the pick on price, reviews, and the short Amsterdam hop; Delft is the value option; Rotterdam and Hotel2Stay confirm instantly.</p></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>As of 16 July 2026. USD converted at ~1.10 per euro. Prices marked as ranges are indicative for peak July and not yet confirmed for our exact dates.</p>
+      <p>Nothing booked. No payments made.</p>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
