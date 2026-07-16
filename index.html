@@ -212,6 +212,9 @@
 
   a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
   a:focus-visible, .step:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  a.chip.go { text-decoration: none; background: transparent; border: 1px solid var(--accent); color: var(--accent); cursor: pointer; transition: background .15s ease; }
+  a.chip.go::before { display: none; }
+  a.chip.go:hover { background: var(--accent-soft); }
 
   footer { margin-top: 46px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
   footer p { margin: 0 0 6px; }
@@ -289,12 +292,14 @@
           <div class="row"><div class="k">Bed</div><div class="v"><b>One large double</b> (confirmed, not twins).</div></div>
           <div class="row"><div class="k">Bikes + trailer</div><div class="v">Lockable bike shed on site. Fits the two Bromptons; whether the folded trailer fits is the question I asked Els.</div></div>
           <div class="row"><div class="k">To Amsterdam</div><div class="v"><b>15-20 min</b> by train -- the easiest of the four for the locker run.</div></div>
-          <div class="row"><div class="k">Booking</div><div class="v">Host-direct via bedandbreakfast.nl -- not on hotels.com, so a separate payment step.</div></div>
+          <div class="row"><div class="k">Booking</div><div class="v">Host-direct via <a href="https://www.bedandbreakfast.nl/en/a/tl5LOd9vJPQc/bed-and-bike-haarlem-nr1" target="_blank" rel="noopener noreferrer">bedandbreakfast.nl</a> -- not on hotels.com, so a separate payment step.</div></div>
         </div>
 
         <div class="pick-foot">
           <span class="chip good">Under budget</span>
           <span class="chip flat">Host: Els &middot; info@bedandbikehaarlemnr1.nl</span>
+          <a class="chip go" href="https://www.bedandbreakfast.nl/en/a/tl5LOd9vJPQc/bed-and-bike-haarlem-nr1" target="_blank" rel="noopener noreferrer">View the listing &#8599;</a>
+          <a class="chip go" href="https://bedandbikehaarlemnr1.nl/en/" target="_blank" rel="noopener noreferrer">Host's own site &#8599;</a>
         </div>
       </div>
     </section>
@@ -315,7 +320,7 @@
             <li><span class="m">+</span><span>Brand free-cancel to ~16:00 the day before.</span></li>
             <li class="no"><span class="m">!</span><span>Pick the king room -- some units are two singles.</span></li>
           </ul>
-          <div class="tagrow"><span class="chip flat">On hotels.com</span></div>
+          <div class="tagrow"><a class="chip go" href="https://www.hotels.com/ho670907/premier-suites-plus-rotterdam-rotterdam-netherlands/" target="_blank" rel="noopener noreferrer">View on hotels.com &#8599;</a><a class="chip go" href="https://www.premiersuiteseurope.com/en/locations/the-netherlands/rotterdam/serviced-apartments-rotterdam" target="_blank" rel="noopener noreferrer">Official site &#8599;</a></div>
         </div>
 
         <div class="card">
@@ -329,7 +334,7 @@
             <li><span class="m">+</span><span>Sloterdijk office district, away from the Arena crowds.</span></li>
             <li class="no"><span class="m">!</span><span>Book the Deluxe Studio (double); the base studio is two singles.</span></li>
           </ul>
-          <div class="tagrow"><span class="chip flat">On hotels.com</span></div>
+          <div class="tagrow"><a class="chip go" href="https://www.hotels.com/ho616600/hotel2stay-amsterdam-netherlands/" target="_blank" rel="noopener noreferrer">View on hotels.com &#8599;</a><a class="chip go" href="https://hotel2stay.nl" target="_blank" rel="noopener noreferrer">Official site &#8599;</a></div>
         </div>
 
         <div class="card">
@@ -343,7 +348,7 @@
             <li class="no"><span class="m">!</span><span>Bed not confirmed as a double, and bike storage is unlisted -- both need a host check.</span></li>
             <li class="no"><span class="m">!</span><span>~55-60 min to Amsterdam (longest of the four).</span></li>
           </ul>
-          <div class="tagrow"><span class="chip flat">Booking.com</span></div>
+          <div class="tagrow"><a class="chip go" href="https://www.booking.com/hotel/nl/apartment-havenstraat.html" target="_blank" rel="noopener noreferrer">View on Booking.com &#8599;</a></div>
         </div>
 
       </div>
@@ -374,7 +379,7 @@
               <td>Double &check;</td>
               <td>Shed (trailer TBD)</td>
               <td class="num">15-20 min</td>
-              <td>Host direct</td>
+              <td><a href="https://www.bedandbreakfast.nl/en/a/tl5LOd9vJPQc/bed-and-bike-haarlem-nr1" target="_blank" rel="noopener noreferrer">Host direct &#8599;</a></td>
             </tr>
             <tr>
               <td><span class="pl">Premier Suites<small>Rotterdam</small></span></td>
@@ -384,7 +389,7 @@
               <td>King*</td>
               <td>In unit / garage</td>
               <td class="num">~40 min</td>
-              <td>hotels.com</td>
+              <td><a href="https://www.hotels.com/ho670907/premier-suites-plus-rotterdam-rotterdam-netherlands/" target="_blank" rel="noopener noreferrer">hotels.com &#8599;</a></td>
             </tr>
             <tr>
               <td><span class="pl">Hotel2Stay<small>Amsterdam</small></span></td>
@@ -394,7 +399,7 @@
               <td>Double*</td>
               <td>Locked shed (best)</td>
               <td class="num">~5 min</td>
-              <td>hotels.com</td>
+              <td><a href="https://www.hotels.com/ho616600/hotel2stay-amsterdam-netherlands/" target="_blank" rel="noopener noreferrer">hotels.com &#8599;</a></td>
             </tr>
             <tr>
               <td><span class="pl">Apt Havenstraat<small>Delft</small></span></td>
@@ -404,7 +409,7 @@
               <td>Unconfirmed</td>
               <td>Unlisted</td>
               <td class="num">~55 min</td>
-              <td>Booking.com</td>
+              <td><a href="https://www.booking.com/hotel/nl/apartment-havenstraat.html" target="_blank" rel="noopener noreferrer">Booking.com &#8599;</a></td>
             </tr>
           </tbody>
         </table>
